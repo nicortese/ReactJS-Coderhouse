@@ -1,5 +1,4 @@
 import React from 'react'
-import logo  from '../components/CartWidget';
 const NavBar = () => {
   return (
     <header class="text-gray-600 body-font">
