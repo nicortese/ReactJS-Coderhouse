@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
+import itemlistContainer from './components/itemlistContainer';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <h1>Hola Mundo!</h1>
     </div>
+    <itemlistContainer></itemlistContainer>
     </>
   );
 }
