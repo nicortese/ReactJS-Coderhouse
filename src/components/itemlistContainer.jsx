@@ -2,7 +2,7 @@ import React from 'react'
 
 function ItemListContainer (){
     return(
-        <h1>Item List</h1>
+        <h1>Indumentaria</h1>
     )
 
 }

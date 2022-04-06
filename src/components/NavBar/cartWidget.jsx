@@ -8,7 +8,6 @@ function CartIcon() {
         <IconButton>
             <ShoppingCartRoundedIcon sx={{color: 'white'}}/>
         </IconButton>
-        
     );
 }
 

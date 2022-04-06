@@ -1,0 +1,21 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+
+
+.buttonStyle{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    justify-content: space-around;
+    margin-left: 25px;
+  }
+
+
+
+
