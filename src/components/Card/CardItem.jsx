@@ -1,31 +1,31 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import ItemCount from './ItemCount';
 
-export default function MediaCard() {
+
+function MediaCard ({id,name,price,image}) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card key={id} sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
         height="140"
-        image="https://http2.mlstatic.com/D_NQ_NP_777678-MLA45504916270_042021-W.jpg"
-        
+        src={image}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Remeras
+          {name}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Remera Essentials
+          $ {price}
         </Typography>
       </CardContent>
       <ItemCount stock={5}/>
     </Card>
   );
 }
+
+export default MediaCard;
 

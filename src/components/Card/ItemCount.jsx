@@ -31,7 +31,7 @@ function ItemCount({ stock }) {
         </Button>
         <br />
       </div>
-      <Button onClick={onAdd} variant="contained" color="success">
+      <Button onClick={onAdd} variant="contained" color="primary">
           Agregar al carro
         </Button>
     </div>
