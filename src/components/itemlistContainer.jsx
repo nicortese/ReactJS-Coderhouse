@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import ItemList from './Card/ItemList';
-import customFetch from './customFetch';
-import products from './Products';
 import styles from "./ItemListContainer.module.css";
+import { useParams } from 'react-router-dom';
+import { traerProductos } from './Products';
+
 
 function ItemListContainer (){
     const [items, setItems]= useState([]);
-    console.log(products)
+
+    const {categoryId}= useParams();
+
+    console.log(categoryId);
+
     useEffect(() => {
-        customFetch(3000, products)
+        traerProductos(categoryId)
         .then( result => {setItems(result);})
         .catch(error => console.log(error));
-    }, [items])
+    }, [categoryId])
 
 
     return(
