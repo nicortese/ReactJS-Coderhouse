@@ -12,7 +12,7 @@ const ItemDetailContainer = () =>{
 
     return(
         <>
-            <ItemDetail key={producto.id} name={producto.name} price={producto.price} image={producto.image}/>
+            <ItemDetail key={producto.id} name={producto.name} price={producto.price} img={producto.img} description={producto.description} />
         </>
     );
 };

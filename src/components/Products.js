@@ -4,7 +4,6 @@ const products = [
         name: "Remera AntiSocialClub",
         price: "15.00",
         image: "https://drops-ba.com/wp-content/uploads/2021/08/Anti-Social-Social-Club-Kkoch-Tee-Black-1.jpg",
-        stock: 10,
         category: "remeras",
         stock: 10,
     },
@@ -60,9 +59,11 @@ const products = [
 const productDetail = [
     {
         id:1,
-        name: 'REMERA NIKE',
-        price: '$10.00',
-        img: 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ac89d319-a3e1-47ab-b253-89c00401ecd6/playera-de-entrenamiento-dri-fit-legend-knTPqEkv.png'
+        name: 'Adidas Yeezy Boost 350 V2 Zebra',
+        price: '$300.00',
+        img: "https://drops-ba.com/wp-content/uploads/2021/11/adidas-Yeezy-Boost-350-V2-Zebra.jpg",
+        description: 'Adidas Yeezy Boost 350 V2 Zebra talle 10 US',
+        stock: 10,
     },
 ]
 
