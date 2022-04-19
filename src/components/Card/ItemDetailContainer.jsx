@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import ItemDetail from './ItemDetail';
-import { traerProducto } from '../Products';
+import { traerDetalleProducto } from '../Products';
+import { useParams } from 'react-router-dom';
 
 const ItemDetailContainer = () =>{
     const [producto, setProduct] = useState([]);
+    const {id}=useParams();
     useEffect(() => {
-        traerProducto(2000)
-            .then(res => setProduct(res.find(it => it.id ===1)))
+        traerDetalleProducto(id)
+            .then(res => setProduct(res))
+            
         
-    }, []);
+    }, [id]);
 
     return(
         <>
-            <ItemDetail key={producto.id} name={producto.name} price={producto.price} img={producto.img} description={producto.description} />
+            <ItemDetail id={producto.id} name={producto.name} price={producto.price} img={producto.image} description={producto.description} />
         </>
     );
 };

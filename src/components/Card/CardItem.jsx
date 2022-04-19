@@ -4,11 +4,12 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import ItemCount from './ItemCount';
+import { Link } from 'react-router-dom';
 
 
 function MediaCard ({id,name,price,image}) {
   return (
-    <Card key={id} sx={{ maxWidth: 345 }}>
+    <Card id={id} sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
         height="140"
@@ -23,6 +24,7 @@ function MediaCard ({id,name,price,image}) {
         </Typography>
       </CardContent>
       <ItemCount stock={5}/>
+      <Link to={`/item/${id}`}>Ver detalle</Link>
     </Card>
   );
 }

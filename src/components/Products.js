@@ -56,16 +56,7 @@ const products = [
         stock: 10,
     } 
 ]
-const productDetail = [
-    {
-        id:1,
-        name: 'Adidas Yeezy Boost 350 V2 Zebra',
-        price: '$300.00',
-        img: "https://drops-ba.com/wp-content/uploads/2021/11/adidas-Yeezy-Boost-350-V2-Zebra.jpg",
-        description: 'Adidas Yeezy Boost 350 V2 Zebra talle 10 US',
-        stock: 10,
-    },
-]
+
 
 
 export const traerProductos = (categoryId) => {
@@ -81,10 +72,11 @@ export const traerProductos = (categoryId) => {
     });
 };
 
-export const traerProducto = () => {
+export const traerDetalleProducto = (id) => {
     return new Promise((resolve, reject) =>{
+        const productosDetalle = products.find((products)=> products.id === Number(id))
         setTimeout(() => {
-            resolve(productDetail);
+            resolve(productosDetalle);
         }, 2000);
     });
 };

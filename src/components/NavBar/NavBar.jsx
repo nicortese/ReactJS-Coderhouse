@@ -23,7 +23,7 @@ export default function ButtonAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            LOGO
+            <Link to="/"> DROPS </Link>
           </Typography>
           <Link style={{margin:'0px 7px'}} to="/category/remeras" color="inherit">Remeras</Link>
           <Link style={{margin:'0px 7px'}} to="/category/hoodies" color="inherit">Hoodies</Link>
