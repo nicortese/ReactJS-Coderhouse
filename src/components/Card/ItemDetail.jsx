@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
 import ItemCount from './ItemCount';
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({id, name, price, img, description}) => {
     
@@ -12,6 +13,16 @@ const ItemDetail = ({id, name, price, img, description}) => {
     }
 
     console.log(quantity)
+
+
+    function cartAdd (quantity, setQuantity){
+
+        // quantity === 0 ? <ItemCount stock={5} cartAdd={cartAdd}/> : 
+        return(
+            <Link to='/cart'>Ir al carrito</Link>
+        )
+        
+    }
 
     return(
     <React.Fragment>
@@ -24,6 +35,7 @@ const ItemDetail = ({id, name, price, img, description}) => {
                     <p>{price}</p>
                 </div>
                 <ItemCount stock={5} cartAdd={handleOnAdd}/>
+                {cartAdd()}
             </Container>
     </React.Fragment>
     )
