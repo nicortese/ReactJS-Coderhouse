@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import styles from "./ItemCount.module.css";
 
-function ItemCount({ stock }) {
+function ItemCount({ stock, cartAdd}) {
   const [count, setCount] = useState(0);
 
   function adding() {
@@ -31,7 +31,7 @@ function ItemCount({ stock }) {
         </Button>
         <br />
       </div>
-      <Button onClick={onAdd} variant="contained" color="primary">
+      <Button onClick={() => cartAdd(count)} variant="contained" color="primary">
           Agregar al carro
         </Button>
     </div>
