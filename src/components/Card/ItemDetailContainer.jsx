@@ -19,7 +19,7 @@ const ItemDetailContainer = () =>{
 
     return(
         <>
-            <ItemDetail id={product.id} name={product.name} price={product.price} img={product.image} description={product.description} />            
+            <ItemDetail product={product} />            
         </>
     );
 };

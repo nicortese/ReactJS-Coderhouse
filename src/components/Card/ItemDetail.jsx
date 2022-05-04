@@ -15,9 +15,8 @@ const ItemDetail = ({id, name, price, img, description}) => {
     console.log(quantity)
 
 
-    function cartAdd (quantity, setQuantity){
+    function cartAdd (){
 
-        // quantity === 0 ? <ItemCount stock={5} cartAdd={cartAdd}/> : 
         return(
             <Link to='/cart'>Ir al carrito</Link>
         )

@@ -17,6 +17,7 @@ const CartContextProvider = ({children}) => {
     }, [cart])
 
     const addItem = (item) =>{
+        console.log("item", item);
         const indexProduct = cart.findIndex((cartItem)=> cartItem.id === item.id);
         if(indexProduct !== -1){
             const newCart = [...cart];
@@ -25,7 +26,7 @@ const CartContextProvider = ({children}) => {
         } else {
             setCart([...cart, item]);
         }
-        console.log(item);
+        console.log(cart);
 };
 
     const removeItem = (id) =>{

@@ -25,8 +25,8 @@ const Cart = () => {
             </div>
             <div className={styles.about}>
               <h1 className={styles.nombre}>{p.name}</h1>
-              <h3 className={styles.descripcion}>{p.description}</h3>
-              <p>Precio: &#36;{p.precio}</p>
+              <h3 className={styles.description}>{p.description}</h3>
+              <p>Precio: &#36;{p.price}</p>
               <div className={styles.counter}>
                 <Button size="small" variant="contained" color="error" className={styles.btn}>-</Button>
                 <div className={styles.count}>{p.count}</div>
@@ -37,7 +37,7 @@ const Cart = () => {
           </div>
         ))}
         <h2 className={styles.texts}>Valor total: &#36;{totalPrice}</h2>
-        {/* <Link to="/checkout" className={styles.texts}>FINALIZAR COMPRA</Link> */}
+        <Link to="/checkout" className={styles.texts}>FINALIZAR COMPRA</Link>
         </>
     )
 }
