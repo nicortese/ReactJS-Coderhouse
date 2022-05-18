@@ -113,7 +113,7 @@ function CheckoutForm() {
                 </Button>
             ) : (
                 <Button onClick={handleOpen} type="submit" variant="contained">
-                Enviar
+                Finalizar compra
                 </Button>
             )}
             </form>

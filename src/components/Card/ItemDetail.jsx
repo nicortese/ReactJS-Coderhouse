@@ -2,11 +2,16 @@ import React, { useState } from 'react'
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
 import ItemCount from './ItemCount';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { Button } from '@mui/material';
 
-const ItemDetail = ({id, name, price, img, description}) => {
+const ItemDetail = (props) => {
     
     const [quantity, setQuantity] = useState(0)
+    
+    const {product:{id,name,price,image, description}}=props
+
+    const history = useNavigate()
     
     function handleOnAdd(q){
         setQuantity(q)
@@ -18,7 +23,11 @@ const ItemDetail = ({id, name, price, img, description}) => {
     function cartAdd (){
 
         return(
-            <Link to='/cart'>Ir al carrito</Link>
+            
+            <Button color='success' variant="contained" onClick={()=>history("/cart")}>
+            Ir al carrito
+            </Button>
+            
         )
         
     }
@@ -29,11 +38,11 @@ const ItemDetail = ({id, name, price, img, description}) => {
             <Container maxWidth="sm">
                 <div id={id}>
                     <h1>{name}</h1>
-                    <img src={img} alt={name}/>
+                    <img src={image} alt={name}/>
                     <p>{description}</p>
                     <p>{price}</p>
                 </div>
-                <ItemCount stock={5} cartAdd={handleOnAdd}/>
+                <ItemCount product={props} stock={5} cartAdd={handleOnAdd}/>
                 {cartAdd()}
             </Container>
     </React.Fragment>

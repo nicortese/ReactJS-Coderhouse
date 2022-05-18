@@ -22,7 +22,7 @@ function ItemCount({ stock, product}) {
   }
   const handleClick = () => {
     if (count !== 0){
-        addItem({...product, count});
+        addItem({...product.product, count});
         setCount(0);
         console.log(cart)
     }
@@ -42,7 +42,7 @@ function ItemCount({ stock, product}) {
       </div>
       <Button onClick={handleClick} variant="contained" color="primary">
           Agregar al carro
-        </Button>
+      </Button>
     </div>
   );
 }

@@ -6,7 +6,8 @@ import ItemDetailContainer from './components/Card/ItemDetailContainer';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Cart from './components/Cart/Cart'
 import CartContextProvider from "./Context/CartContext";
-import CheckoutForm from "./components/Form/CheckoutForm";
+import Footer from './components/Footer/Footer';
+import CheckoutForm from './components/Form/CheckoutForm';
 
 
 
@@ -23,6 +24,7 @@ function App() {
           <Route path='/cart' element={<Cart/>}/>
           <Route path="/checkout" element={<CheckoutForm />} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </CartContextProvider>
   );

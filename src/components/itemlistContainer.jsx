@@ -29,7 +29,9 @@ function ItemListContainer (){
 
 
     return(
+
         <div className={styles.itemliststyle}>
+            {/* <img src="https://drops-ba.com/wp-content/uploads/2021/07/Hero-Landing-Drops.jpg" alt="" /> */}
             <ItemList products = {items}/>
         </div>
     )

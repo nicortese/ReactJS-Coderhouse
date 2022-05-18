@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 function MediaCard (props) {
   const {id,name,price,image}=props
-
+  console.log(props)
   return (
     <Card id={id} sx={{ maxWidth: 345 }}>
       <CardMedia
@@ -25,7 +25,7 @@ function MediaCard (props) {
           $ {price}
         </Typography>
       </CardContent>
-      <ItemCount stock={5} product={props}/>
+      
       <Link to={`/item/${id}`}>Ver detalle</Link>
     </Card>
   );

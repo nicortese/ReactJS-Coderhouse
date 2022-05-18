@@ -20,10 +20,9 @@ export default function ButtonAppBar() {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <Link to="/"> DROPS </Link>
+            <Link to="/"> Cop´r Drop </Link>
           </Typography>
           <Link style={{margin:'0px 7px'}} to="/category/remeras" color="inherit">Remeras</Link>
           <Link style={{margin:'0px 7px'}} to="/category/hoodies" color="inherit">Hoodies</Link>

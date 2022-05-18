@@ -11,6 +11,8 @@
     color: #e44c4c;
     cursor: pointer;
     border-bottom: 1px solid #e44c4c;
+    text-decoration: none;
+    border-radius: 5;
 }
 .items {
     margin: auto;
@@ -56,4 +58,25 @@
     display: flex;
     justify-content: center;
     text-decoration: none;
+    text-align: center; 
+}
+
+.button{
+    background-color: rgb(254, 0, 0);
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.texts2{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    color: red;
 }
