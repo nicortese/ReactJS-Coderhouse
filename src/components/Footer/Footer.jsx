@@ -61,7 +61,7 @@ export default function Footer() {
               <Box borderBottom={1}>Redes</Box>
               <Box>
                 <InstagramIcon type="button" onClick={() => handleClick("https://www.instagram.com/") }>
-                        instagram
+                    instagram
                 </InstagramIcon>
               </Box>
               <Box>
